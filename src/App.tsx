@@ -1,12 +1,20 @@
 import './App.css'
 
-import Header from "./components/Layout/Header";
+import Box from '@mui/material/Box';
+import CssBaseline from '@mui/material/CssBaseline';
+
+import Header from "./components/Layout/Header/Header";
+import AvailableProducts from './components/Products/AvailableProducts';
 
 function App() {
 
   return (
     <>
-      <Header/>
+      <Box sx={{ display: 'flex', flexDirection: 'column' }}>
+        <CssBaseline />
+        <Header/>
+        <AvailableProducts/>
+      </Box>
     </>
   )
 }
