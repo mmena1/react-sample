@@ -4,12 +4,12 @@ import Toolbar from '@mui/material/Toolbar';
 import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import Badge from '@mui/material/Badge';
-import MailIcon from '@mui/icons-material/Mail';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 
 import HeaderSearch from './HeaderSearch';
+import HeaderCartButton from './HeaderCartButton';
 
-const Header = () => {
+const Header = props => {
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
@@ -25,11 +25,7 @@ const Header = () => {
           <HeaderSearch/>
           <Box sx={{ flexGrow: 1 }} />
           <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
-            <IconButton size="large" aria-label="show 4 new mails" color="inherit">
-              <Badge badgeContent={4} color="error">
-                <MailIcon />
-              </Badge>
-            </IconButton>
+            <HeaderCartButton onClick={props.onShowCart} />
             <IconButton
               size="large"
               aria-label="show 17 new notifications"
