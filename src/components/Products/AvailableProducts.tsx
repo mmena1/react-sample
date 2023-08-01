@@ -1,7 +1,7 @@
 import Box from '@mui/material/Box';
 
 import ProductItem from "./ProductItem/ProductItem";
-import Content from '../UI/Content';
+import ProductContainer from './ProductContainer';
 
 const DUMMY_PRODUCTS = [
   {
@@ -22,6 +22,7 @@ const AvailableProducts = () => {
   const productList = DUMMY_PRODUCTS.map((product) => (
     <ProductItem
       key={product.id}
+      id={product.id}
       name={product.name}
       description={product.description}
       price={product.price}
@@ -29,9 +30,9 @@ const AvailableProducts = () => {
   ));
   return (
     <Box component="main" sx={{ p: 3 }}>
-      <Content>
+      <ProductContainer>
         {productList}
-      </Content>
+      </ProductContainer>
     </Box>
   );
 };
