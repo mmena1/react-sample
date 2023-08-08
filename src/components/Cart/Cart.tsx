@@ -19,11 +19,11 @@ const Cart = props => {
   const hasItems = cartCtx.items.length > 0;
   const cartItems = (
     <List>
-      {cartCtx.items.map(item => {
+      {cartCtx.items.map(item => (
         <ListItem disablePadding>
           <ListItemText primary={item.name} />
         </ListItem>
-      })}
+      ))}
       {/* <ListItem disablePadding>
           <ListItemText primary="Hello" />
         </ListItem>
